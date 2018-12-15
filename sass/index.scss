@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2018 Includable/Lean Motherfuckers.
+ * All rights reserved.
+ */
+
+/* ===== Colors ===== */
+
+$body-background-color: #010203;
+$body-color: #fff !default;
+$text: #fff;
+$title-color: #fff;
+$strong-color: #fff;
+$body-color: #fff;
+$grey-dark: #fff;
+$link-color: #fff;
+
+$fullhd-enabled: false;
+$widescreen-enabled: false;
+
+/* ===== Bulma ===== */
+
+@import "../node_modules/bulma/bulma.sass";
