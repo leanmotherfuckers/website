@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2019 Lean Motherfuckers.
+ * All rights reserved.
+ */
+
+/* ===== Colors ===== */
+
+$body-background-color: #010203;
+$body-color: #fff !default;
+$text: #fff;
+$title-color: #fff;
+$strong-color: #fff;
+$body-color: #fff;
+$grey-dark: #fff;
+$link-color: #fff;
+
+$fullhd-enabled: false;
+$widescreen-enabled: false;
+
+/* ===== Bulma ===== */
+
+@import '../node_modules/bulma/bulma.sass';
+
+/* ===== Background ===== */
+
+body {
+    background: $body-background-color url('/static/background.svg') no-repeat center;
+    background-size: 70% auto;
+    background-attachment: fixed;
+}
+
+section {
+    box-sizing: border-box;
+    min-height: 56vh;
+    display: flex;
+    align-items: center;
+}
+
+section:first-child {
+    margin-top: 22vh;
+}
+
+section:last-child {
+    margin-bottom: 22vh;
+}
+
+/* ===== Section: we-arent ===== */
+
+.we-arent .title {
+    line-height: 1.5;
+}
+
+.we-are .title {
+    line-height: 1.1;
+    font-size: 8em;
+}
+
+.brands img {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
