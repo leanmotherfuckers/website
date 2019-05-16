@@ -5,6 +5,9 @@ orbs:
 
 jobs:
   build:
+    filters:
+      branches:
+        only: stage
     docker:
       - image: 'circleci/node'
     steps:
@@ -14,6 +17,8 @@ jobs:
       - run: npm run build
       - run: rm -rf node_modules
       - run: rm -rf .git
+      - run: rm .gitignore
+      - run: rm design.sketch
       - run: rm -rf .circleci
       - run: rm -rf sass
       - aws-s3/sync:
