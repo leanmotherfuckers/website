@@ -5,9 +5,6 @@ orbs:
 
 jobs:
   build:
-    filters:
-      branches:
-        only: stage
     docker:
       - image: 'circleci/node'
     steps:
@@ -15,14 +12,18 @@ jobs:
       - run: sudo apt-get install python-dev
       - run: npm install
       - run: npm run build
-      - run: rm -rf node_modules
-      - run: rm -rf .git
-      - run: rm .gitignore
-      - run: rm design.sketch
-      - run: rm -rf .circleci
-      - run: rm -rf sass
+      - run: rm -rf src/sass
       - aws-s3/sync:
-          from: .
+          from: src
           to: 's3://leanmotherfuckers.com'
           arguments: --acl public-read --cache-control "max-age=86400"
           overwrite: true
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
