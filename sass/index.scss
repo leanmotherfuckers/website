@@ -118,3 +118,40 @@ section {
   background-size: cover;
   text-align: center;
 }
+
+
+@media (max-width: 767px) {
+  body {
+    background-size: 130% auto;
+  }
+
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+  .title {
+    zoom: 0.7;
+  }
+
+  .we-are .title {
+    font-size: 7.8em;
+  }
+  .we-are .title span {
+    display: block;
+  }
+
+  .brands img {
+    max-width: 100%;
+  }
+
+  .team .team-member img {
+    width: 64px;
+  }
+  .team .team-member .team-member-inner {
+    margin-left: 96px;
+  }
+}
