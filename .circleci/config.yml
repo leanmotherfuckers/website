@@ -12,6 +12,7 @@ jobs:
       - run: sudo apt-get install python-dev
       - run: npm install
       - run: npm run build
+      - run: rm -rf node_modules
       - aws-s3/sync:
           from: .
           to: 's3://leanmotherfuckers.com'
