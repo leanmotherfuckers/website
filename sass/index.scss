@@ -26,39 +26,95 @@ $widescreen-enabled: false;
 /* ===== Background ===== */
 
 body {
-    background: $body-background-color url('/static/background.svg') no-repeat center;
-    background-size: 70% auto;
-    background-attachment: fixed;
+  background: $body-background-color url('/static/background.svg') no-repeat center;
+  background-size: 70% auto;
+  background-attachment: fixed;
 }
 
 section {
-    box-sizing: border-box;
-    min-height: 56vh;
-    display: flex;
-    align-items: center;
-}
+  box-sizing: border-box !important;
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 32px !important;
 
-section:first-child {
+  &:first-child {
     margin-top: 22vh;
-}
+  }
 
-section:last-child {
+  &:last-child {
     margin-bottom: 22vh;
+  }
+
+  h3.title {
+    font-weight: 600;
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  h4.title {
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 12px !important;
+  }
+
+  a {
+    color: #fff !important;
+    font-weight: 700;
+    border-bottom: 2px solid #fff;
+  }
 }
 
 /* ===== Section: we-arent ===== */
 
 .we-arent .title {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .we-are .title {
-    line-height: 1.1;
-    font-size: 8em;
+  line-height: 1.1;
+  font-size: 8em;
 }
 
 .brands img {
-    max-width: 600px;
-    margin: 0 auto;
-    display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}
+
+.program {
+  background: transparent no-repeat center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000000 100%);
+  background-size: cover;
+}
+
+.team {
+  background: #000;
+
+  .team-member {
+    margin-top: 64px;
+
+    img {
+      float: left;
+      width: 198px;
+    }
+
+    .team-member-inner {
+      margin-left: 262px;
+    }
+  }
+}
+
+.contact {
+  background: transparent no-repeat center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #000000 100%);
+  background-size: cover;
+  text-align: center;
 }
