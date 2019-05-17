@@ -18,6 +18,7 @@ jobs:
           to: 's3://leanmotherfuckers.com'
           arguments: --acl public-read --cache-control "max-age=86400"
           overwrite: true
+      - run: aws cloudfront create-invalidation --distribution-id EA3HBZCNIN0B7 --paths /\*
 
 workflows:
   version: 2
