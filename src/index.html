@@ -15,8 +15,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+
     <title>Lean Motherfuckers · A different type of consulting</title>
+
     <meta name="description" content="Lean Motherfuckers is a lean, mean, product-producing team doing design sprints for startups and corporates."/>
     <meta property="og:url" content="https://leanmotherfuckers.com/"/>
     <meta property="og:type" content="website"/>
@@ -35,6 +37,9 @@
     <link rel="canonical" href="https://leanmotherfuckers.com/">
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="apple-touch-icon" href="/static/touchicon.png"/>
+
+    <meta name="theme-color" content="#000000"/>
+    <link rel="manifest" href="manifest.json"/>
 
     <link rel="stylesheet" href="/dist/index.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
@@ -138,5 +143,6 @@
 </main>
 
 <script>AOS.init({ once: true, duration: 1000 })</script>
+<script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/sw.js') }</script>
 </body>
 </html>
