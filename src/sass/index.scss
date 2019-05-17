@@ -122,7 +122,9 @@ section {
 
 @media (max-width: 767px) {
   body {
-    background-size: 130% auto;
+    background: $body-background-color url('/static/background-mobile.svg') no-repeat 28px 32px;
+    background-size: auto 48px;
+    background-attachment: scroll;
   }
 
   section {
