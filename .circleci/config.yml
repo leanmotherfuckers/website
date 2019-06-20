@@ -12,9 +12,8 @@ jobs:
       - run: sudo apt-get install python-dev
       - run: npm install
       - run: npm run build
-      - run: rm -rf src/sass
       - aws-s3/sync:
-          from: src
+          from: dist
           to: 's3://leanmotherfuckers.com'
           arguments: --acl public-read --cache-control "max-age=86400"
           overwrite: true

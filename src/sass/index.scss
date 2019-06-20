@@ -5,7 +5,7 @@
  * All rights reserved.
  */
 
-/* ===== Colors ===== */
+/* ===== General===== */
 
 $body-background-color: #010203;
 $body-color: #fff !default;
@@ -15,21 +15,19 @@ $strong-color: #fff;
 $body-color: #fff;
 $grey-dark: #fff;
 $link-color: #fff;
-
 $fullhd-enabled: false;
 $widescreen-enabled: false;
 
-/* ===== Bulma ===== */
-
 @import '../../node_modules/bulma/bulma.sass';
-
-/* ===== Background ===== */
+@import '../../node_modules/aos/src/sass/aos.scss';
 
 body {
   background: $body-background-color url('/static/background.svg') no-repeat center;
   background-size: 70% auto;
   background-attachment: fixed;
 }
+
+/* ===== Sections ===== */
 
 section {
   box-sizing: border-box !important;
@@ -71,8 +69,6 @@ section {
     border-bottom: 1px solid #fff;
   }
 }
-
-/* ===== Section: we-arent ===== */
 
 .we-arent .title {
   line-height: 1.5;
@@ -119,6 +115,7 @@ section {
   text-align: center;
 }
 
+/* ===== Mobile ===== */
 
 @media (max-width: 767px) {
   body {
