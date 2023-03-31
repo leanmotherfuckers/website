@@ -1,11 +1,6 @@
 @charset "utf-8";
 @import url('https://rsms.me/inter/inter.css');
 
-/*
- * Copyright 2019 Lean Motherfuckers.
- * All rights reserved.
- */
-
 /* ===== General===== */
 
 $body-background-color: #010203;
@@ -23,8 +18,8 @@ $body-family: Inter,BlinkMacSystemFont,-apple-system,'Segoe UI',Roboto,Oxygen,Ub
 @import '../../node_modules/bulma/bulma.sass';
 @import '../../node_modules/aos/src/sass/aos.scss';
 
-body {
-  background: $body-background-color url('/static/background.svg') no-repeat center;
+html {
+  background: $body-background-color url('../static/background.svg') no-repeat center;
   background-size: 70% auto;
   background-attachment: fixed;
 }
@@ -143,7 +138,7 @@ section {
 
 @media (max-width: 767px) {
   body {
-    background: $body-background-color url('/static/background-mobile.svg') no-repeat 28px 32px;
+    background: $body-background-color url('../static/background-mobile.svg') no-repeat 28px 32px;
     background-size: auto 48px;
     background-attachment: scroll;
   }
